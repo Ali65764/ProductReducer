@@ -69,7 +69,7 @@ function Home() {
     const handleAddFavourite = (product, isFav) => {
         dispatch({ type: "ADD_FAVOURITE", payload: product })
         toast[isFav ? "warning" : "success"](
-            isFav ? "Product removed from favourite" : "Product added favourite successfully" ,{autoClose:1500}
+            isFav ? "Product removed from favourite" : "Product added favourite successfully", { autoClose: 1500 }
         )
     }
     return (
@@ -93,7 +93,7 @@ function Home() {
                     : filteredProducts.map((product) => (
                         <ProductCard key={product.id} product={product}>
                             <ActionCard isInBasket={isInBasket} isInFavourite={isInFavourite} product={product}
-                                navigate={navigate} dispatch={dispatch} handleAddBasket={() => handleAddBasket(product)}
+                                navigate={navigate} handleAddBasket={() => handleAddBasket(product)}
                                 handleAddFavourite={() => handleAddFavourite(product, isInFavourite(product.id))} />
                         </ProductCard>
                     ))

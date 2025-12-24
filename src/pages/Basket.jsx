@@ -9,7 +9,7 @@ import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
 import { toast } from 'react-toastify'
 
-const ActionCard = React.memo(({ data, navigate, handleRemoveBasket }) => (
+const ActionCard = React.memo(({ data, navigate, handleRemoveBasket,dispatch }) => (
   <>
     <p className='ml-2 text-[#0e7490] font-bold mt-2'>Total: ${(data.count * data.price).toFixed(2)}</p>
     <div className='flex justify-center mt-2'>
